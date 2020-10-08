@@ -102,7 +102,7 @@ By Hades @0xhades
 			HttpWebResponse HttpResponse = (HttpWebResponse)request.GetResponse();
 			StreamReader Reader = new StreamReader(HttpResponse.GetResponseStream());
 			string Response = Reader.ReadToEnd();
-
+			Reader.Close();
 			string log = "NULL";
 			if (Response.Contains("html")) {
 				log = $"{HttpResponse.StatusCode}\n{Proxies[(int)proxy]}\n{Usernames[(int)user]}\n{Endpoint}";
@@ -135,7 +135,7 @@ By Hades @0xhades
 				HttpWebResponse errorResponse = ex.Response as HttpWebResponse;
 				StreamReader Reader = new StreamReader(errorResponse.GetResponseStream());
 				string Response = Reader.ReadToEnd();
-				
+				Reader.Close();
 				string log = "NULL";
 				if (Response.Contains("html")) {
 					log = $"{errorResponse.StatusCode}\n{Proxies[(int)proxy]}\n{Usernames[(int)user]}\n{Endpoint}";
