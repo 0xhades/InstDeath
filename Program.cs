@@ -131,7 +131,7 @@ By Hades @0xhades
 				UsernameIndex = 0;
 			}
 		} catch (WebException ex) {
-			if (!ex.Message.Contains("timed out")) {
+			if (!ex.Message.Contains("timed out") && !ex.Message.Contains("Bad Gateway") && !ex.Message.Contains("502")) {
 				HttpWebResponse errorResponse = ex.Response as HttpWebResponse;
 				StreamReader Reader = new StreamReader(errorResponse.GetResponseStream());
 				string Response = Reader.ReadToEnd();
