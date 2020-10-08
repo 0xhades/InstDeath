@@ -6,12 +6,9 @@
 
 **Download .NET Core 3**
 
-**starksoft.aspen library is required**
-
-in the same path of Program.cs (project folder)
-execute:
 ```
-dotnet add package starksoft.aspen
+git clone https://github.com/JustGhostz/InstDeath.git
+cd InstDeath
 ```
 
 # run
