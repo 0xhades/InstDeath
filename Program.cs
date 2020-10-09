@@ -154,7 +154,7 @@ By Hades @0xhades
 				}
 			} else {
 				StreamWriter r = File.AppendText("errors_log.txt");
-				r.WriteLine($"{ex.Message} : {ex.GetType().toString()}");
+				r.WriteLine($"{ex.Message} : {ex.GetType().ToString()}");
 				r.Close();
 			}
 			int NextProxy = 0;
