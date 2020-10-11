@@ -216,7 +216,7 @@ By Hades @0xhades
 		Console.Write("Enter password: ");
 		Password = Console.ReadLine();
 
-		bool once = true;
+		bool once = false;
 		randomEndpoint = true;
 		
 		List<Thread> threads = new List<Thread>();
